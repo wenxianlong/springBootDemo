@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <jmxConfigurator/>
+
+    <!--<include resource="org/springframework/boot/logging/logback/base.xml" />-->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+    <include resource="org/springframework/boot/logging/logback/file-appender.xml"/>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <!-- addtivity 是否向上级loger传递打印信息，默认是true。-->
+    <logger name="com.zujuan.mobile" level="TRACE" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <!--<appender-ref ref="FILE"/>-->
+    </logger>
+
+</configuration>

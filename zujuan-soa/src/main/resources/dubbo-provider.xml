@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- consumer's application name, used for tracing dependency relationship (not a matching criterion),
+    don't set it same as provider -->
+
+    <!-- use multicast registry center to discover service -->
+    <dubbo:registry address="zookeeper://localhost:2181"/>
+
+    <!-- service implementation, as same as regular local bean -->
+    <bean id="personSoaService" class="com.xkw.zujuan.soa.impl.PersonSoaServiceImpl"/>
+
+    <!-- declare the service interface to be exported -->
+    <dubbo:service interface="com.xkw.zujuan.soa.PersonSoaService" ref="personSoaService"/>
+
+</beans>
