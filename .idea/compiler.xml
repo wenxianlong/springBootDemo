@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zujuan-common" />
+        <module name="zujuan-dao" />
+        <module name="zujuan-domain" />
+        <module name="zujuan-rpc" />
+        <module name="zujuan-service" />
+        <module name="zujuan-soa" />
+        <module name="zujuan-web" />
+        <module name="zujuan-work" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="zujuan" target="1.8" />
+      <module name="zujuan-common" target="1.8" />
+      <module name="zujuan-dao" target="1.8" />
+      <module name="zujuan-domain" target="1.8" />
+      <module name="zujuan-rpc" target="1.8" />
+      <module name="zujuan-service" target="1.8" />
+      <module name="zujuan-soa" target="1.8" />
+      <module name="zujuan-web" target="1.8" />
+      <module name="zujuan-work" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="zujuan-common" options="-parameters" />
+      <module name="zujuan-dao" options="-parameters" />
+      <module name="zujuan-domain" options="-parameters" />
+      <module name="zujuan-rpc" options="-parameters" />
+      <module name="zujuan-service" options="-parameters" />
+      <module name="zujuan-soa" options="-parameters" />
+      <module name="zujuan-web" options="-parameters" />
+      <module name="zujuan-work" options="-parameters" />
+    </option>
+  </component>
+</project>

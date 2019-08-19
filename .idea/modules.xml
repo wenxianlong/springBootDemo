@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/zujuan.iml" filepath="$PROJECT_DIR$/zujuan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zujuan-common/zujuan-common.iml" filepath="$PROJECT_DIR$/zujuan-common/zujuan-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zujuan-dao/zujuan-dao.iml" filepath="$PROJECT_DIR$/zujuan-dao/zujuan-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zujuan-domain/zujuan-domain.iml" filepath="$PROJECT_DIR$/zujuan-domain/zujuan-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zujuan-rpc/zujuan-rpc.iml" filepath="$PROJECT_DIR$/zujuan-rpc/zujuan-rpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zujuan-service/zujuan-service.iml" filepath="$PROJECT_DIR$/zujuan-service/zujuan-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zujuan-soa/zujuan-soa.iml" filepath="$PROJECT_DIR$/zujuan-soa/zujuan-soa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zujuan-web/zujuan-web.iml" filepath="$PROJECT_DIR$/zujuan-web/zujuan-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zujuan-work/zujuan-work.iml" filepath="$PROJECT_DIR$/zujuan-work/zujuan-work.iml" />
+    </modules>
+  </component>
+</project>

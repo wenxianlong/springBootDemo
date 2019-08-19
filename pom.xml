@@ -130,13 +130,19 @@
             <optional>true</optional>
         </dependency>
 
-        <!--canal服务
+        <!--canal服务-->
         <dependency>
             <groupId>com.alibaba.otter</groupId>
             <artifactId>canal.client</artifactId>
-            <version>1.1.3</version>
+            <version>1.0.25</version>
         </dependency>
-        -->
+
+        <!--引入kafak的jar-->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>1.3.5.RELEASE</version>
+        </dependency>
 
     </dependencies>
 
