@@ -30,6 +30,11 @@ spring:
       username: zujuan
       password: 21cn.com
       driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  thymeleaf:
+    cache: false # 本地开发，关闭缓存
+    prefix: classpath:/views/ #调整页面路径
+
   redis:
     host: 127.0.0.1
     port: 6379
@@ -52,12 +57,9 @@ spring:
       repositories:
         enabled :true
 
-  level:
-    com.zujuan.api.mapper: debug  #打印SQL信息
-
   kafka:
     # 指定kafka 代理地址，可以多个
-    bootstrap-servers: 192.168.10.100:9092
+    bootstrap-servers: 127.0.0.1:9092
     producer:
       retries: 0
       # 每次批量发送消息的数量
@@ -68,25 +70,27 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
     consumer:
-      # 指定默认消费者group id
-      group-id: consumer-tutorial
-      auto-commit-interval: 100
-      auto-offset-reset: earliest
       enable-auto-commit: true
-      # 指定消息key和消息体的编解码方式
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-    # 指定listener 容器中的线程数，用于提高并发量
-    listener:
-      concurrency: 3
+      group-id: kafka #群组ID
+      auto-offset-reset: earliest #启东时接收没有接收到的数据
 
-dubbo:
-  registry:
-    address: 127.0.0.1:2181
-    protocol: zookeeper
-  protocol:
-    name: dubbo
-    port: 20881
-    accesslog: true
-  monitor:
-    protocol: registry
+  dubbo:
+    application:
+      id: demo-dubbo-provider
+      name: zujuan-provider
+    server: true
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    protocol:
+      name: dubbo
+      port: 20881
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #配置项：开启下划线到驼峰的自动转换. 作用：将数据库字段根据驼峰规则自动注入到对象属性。
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    com.xkw.zujuan.dao.mapper: debug  #打印SQL信息
+

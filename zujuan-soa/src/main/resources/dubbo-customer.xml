@@ -5,16 +5,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <!-- 提供方应用信息，用于计算依赖关系
-    一个项目同时使用了dubbo的消费者服务和dubbo的提供者服务
-    在dubbo-provider.xml和dubbo-comsumer.xml里头只保留一个如下配置（只要（有且仅有）有一个文件有就好）：
-    -->
-    <dubbo:application name="merchant-center"
-                       owner="merchant"
-                       version="1.0.0"/>
 
     <!-- 注册中心服务地址 -->
-    <dubbo:registry address="zookeeper://localhost:2181" />
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" />
 
     <!-- 用dubbo协议在30001 -->
     <dubbo:protocol name="dubbo" port="20881" />

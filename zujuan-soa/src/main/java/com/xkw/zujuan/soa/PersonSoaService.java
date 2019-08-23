@@ -10,5 +10,10 @@ import com.xkw.zujuan.domain.param.PersonParam;
  */
 public interface PersonSoaService {
 
+    /**
+     * 获取用户列表
+     * @param param
+     * @return
+     */
     RestResult getPersonListByParam(PersonParam param);
 }

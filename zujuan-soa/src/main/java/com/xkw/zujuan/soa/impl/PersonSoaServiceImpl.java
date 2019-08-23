@@ -20,8 +20,8 @@ import java.util.List;
  * @author wenxianlong
  * @date 2019-08-16
  */
-//@Service(timeout = 2000)
-//@Component
+@Service(interfaceClass = PersonSoaService.class)
+@Component
 public class PersonSoaServiceImpl implements PersonSoaService {
 
     /**

@@ -113,20 +113,15 @@
 
         <!--dubbo服务-->
         <dependency>
-            <groupId>com.alibaba.boot</groupId>
+            <groupId>com.alibaba.spring.boot</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>0.2.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.zookeeper</groupId>
-                    <artifactId>zookeeper</artifactId>
-                </exclusion>
-            </exclusions>
+            <version>2.0.0</version>
         </dependency>
+
         <dependency>
-            <groupId>org.apache.zookeeper</groupId>
-            <artifactId>zookeeper</artifactId>
-            <version>3.4.13</version>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.10</version>
         </dependency>
 
         <dependency>

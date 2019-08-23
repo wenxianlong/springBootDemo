@@ -7,9 +7,14 @@
 
     <!-- consumer's application name, used for tracing dependency relationship (not a matching criterion),
     don't set it same as provider -->
+    <!-- 提供方应用信息，用于计算依赖关系
+    一个项目同时使用了dubbo的消费者服务和dubbo的提供者服务
+    在dubbo-provider.xml和dubbo-comsumer.xml里头只保留一个如下配置（只要（有且仅有）有一个文件有就好）：
+    -->
+    <dubbo:application name="dubbo-provider" owner="dubbo-provider" />
 
     <!-- use multicast registry center to discover service -->
-    <dubbo:registry address="zookeeper://localhost:2181"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" client="zkclient"/>
 
     <!-- service implementation, as same as regular local bean -->
     <bean id="personSoaService" class="com.xkw.zujuan.soa.impl.PersonSoaServiceImpl"/>
